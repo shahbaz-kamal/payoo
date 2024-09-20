@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Home page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- Available balance -->
+            <div>
+              <div class="stats shadow">
+                <div class="stat">
+                  <div class="stat-value">9400</div>
+                  <div class="stat-desc">Available Balance</div>
+                </div>
+              </div>
+            </div>
+            <!-- divider -->
+            <div class="divider"></div>
+            <!-- use action button -->
+            <div>
+              <button class="btn btn-lg">Add Money</button>
+              <button class="btn btn-lg">Cash Out</button>
+            </div>
+            <div class="divider"></div>
+            <!-- add money form starts -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Amount to Add</span>
+                  </label>
+                  <input
+                    id="money-to-be-added"
+                    type="number"
+                    placeholder="Add Amount to Withdraw"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Pin Number</span>
+                  </label>
+                  <input
+                    id="pin-to-verify"
+                    autocomplete="off"
+                    type="password"
+                    placeholder="Enter 4 digit Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover"
+                      >Forgot pin?</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-add-money" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- add money form ends -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
