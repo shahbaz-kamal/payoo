@@ -23,6 +23,9 @@ document
 
       //   step 6: Updating the balance
       document.getElementById("current-balance").innerText = newBalanceCashOut;
+      //    step 7: clearing input fields //
+      document.getElementById("money-to-be-cashed-out").value = "";
+      document.getElementById("pin-to-verify-cash-out").value = "";
     } else {
       prompt("Wrong pin");
     }
