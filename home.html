@@ -21,7 +21,7 @@
             <div>
               <div class="stats shadow">
                 <div class="stat">
-                  <div class="stat-value">9400</div>
+                  <div id="current-balance" class="stat-value">9400</div>
                   <div class="stat-desc">Available Balance</div>
                 </div>
               </div>
@@ -35,7 +35,9 @@
             </div>
             <div class="divider"></div>
             <!-- add money form starts -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -75,10 +77,53 @@
               </form>
             </div>
             <!-- add money form ends -->
+
+            <!-- Cash Out Starts -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Amount to Withdraw</span>
+                  </label>
+                  <input
+                    id="money-to-be-cashed-out"
+                    type="number"
+                    placeholder="Add Amount to Withdraw"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Pin Number</span>
+                  </label>
+                  <input
+                    id="pin-to-verify-cash-out"
+                    autocomplete="off"
+                    type="password"
+                    placeholder="Enter 4 digit Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover"
+                      >Forgot pin?</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-cash-out" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Cash Out Ends -->
           </div>
         </div>
       </div>
     </main>
     <script src="./js/home.js"></script>
+    <script src="./js/cash-out.js"></script>
   </body>
 </html>
